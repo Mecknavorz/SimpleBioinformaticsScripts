@@ -2,9 +2,9 @@
 def patternToNumber(pattern):
     if pattern == "":
         return 0
-    letter = pattern[-1]
-    prefix = pattern[0:len(pattern)-1]
-    return 4*patternToNumber(prefix)+toNum(letter)
+    letter = pattern[-1] #get the ones place equivalent
+    prefix = pattern[0:len(pattern)-1] #save the rest so we can operate on it recurively
+    return 4*patternToNumber(prefix)+toNum(letter) #standard base conversion from base 4 to 10
 
 #simple function to convert base to it' # counterpait for frequency array
 def toNum(letter):
